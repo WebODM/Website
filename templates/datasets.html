@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+  .datasets-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 1rem 6rem;
+  }
+
+  .datasets-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .datasets-page .lead {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .datasets-page .table {
+    font-size: 0.9rem;
+  }
+
+  .datasets-page .table thead th {
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    padding: 0.75rem 0.65rem;
+  }
+
+  .datasets-page .table td {
+    vertical-align: middle;
+    padding: 0.6rem 0.65rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .datasets-page .table tbody tr:hover {
+    background: #f8fafc;
+  }
+
+  .datasets-page .dataset-name {
+    font-weight: 500;
+    color: #1e293b;
+  }
+
+  .datasets-page .dataset-name a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .datasets-page .dataset-name a:hover {
+    text-decoration: underline;
+  }
+
+  .datasets-page .dataset-name.recommended a {
+    font-weight: 700;
+  }
+
+  .datasets-page .badge-yes {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 0.7rem;
+  }
+
+  .datasets-page .badge-no {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    font-size: 0.65rem;
+  }
+
+  .datasets-page .dronedb-link {
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+
+  .datasets-page .dronedb-link:hover {
+    color: var(--primary-dark);
+  }
+
+  .datasets-page .text-muted-sm {
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+
+  .datasets-page .num {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  .datasets-page .contribute-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: #475569;
+    font-size: 0.92rem;
+  }
+
+  .datasets-page .contribute-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .datasets-page .contribute-box a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .datasets-page .table {
+      font-size: 0.82rem;
+    }
+
+    .datasets-page .table thead th,
+    .datasets-page .table td {
+      padding: 0.5rem 0.4rem;
+    }
+  }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+{% set datasets = load_data(path="data/datasets.json") %}
+
+<div class="datasets-page">
+    {{ page.content | safe }}
+
+    <div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="num"># Images</th>
+          <th class="num">Size (MB)</th>
+          <th class="text-center">Browse</th>
+          <th class="text-center">GPS</th>
+          <th class="text-center">GCP</th>
+          <th class="text-center">RTK</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in datasets %}
+        <tr>
+          <td class="dataset-name{% if d.recommended %} recommended{% endif %}">
+            <a href="{{ d.url }}">{{ d.name }}</a>
+          </td>
+          <td class="num">{{ d.images }}</td>
+          <td class="num">{{ d.size_mb }}</td>
+          <td class="text-center">
+            {% if d.dronedb %}
+              <a class="dronedb-link" href="{{ d.dronedb }}" title="Browse on DroneDB"><i class="bi bi-eye"></i></a>
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {% if d.gps %}<span class="badge-yes"><i class="bi bi-check2"></i></span>
+            {% else %}<span class="badge-no"><i class="bi bi-x"></i></span>{% endif %}
+          </td>
+          <td class="text-center">
+            {% if d.gcp %}<span class="badge-yes"><i class="bi bi-check2"></i></span>
+            {% else %}<span class="badge-no"><i class="bi bi-x"></i></span>{% endif %}
+          </td>
+          <td class="text-center">
+            {% if d.rtk %}<span class="badge-yes"><i class="bi bi-check2"></i></span>
+            {% else %}<span class="badge-no"><i class="bi bi-x"></i></span>{% endif %}
+          </td>
+          <td class="text-muted-sm">{{ d.notes | safe }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    <div class="contribute-box">
+      <i class="bi bi-plus-circle"></i>&ensp;Want to contribute a dataset? <a href="https://discord.gg/RxHPXCSMBS">Post a link on discord</a> or <a href="https://github.com/WebODM/Website/edit/master/data/datasets.json">open a PR</a>.
+    </div>
+</div>
+{% endblock content %}

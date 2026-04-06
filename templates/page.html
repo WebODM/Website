@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 mb-5">
+            {{ page.content|safe }}
+        </div>
+    </div>
+</div>
+{% endblock content %}

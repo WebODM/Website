@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+
+{% block title %}WebODM - Drone Mapping Software{% endblock title %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <!-- Hero Section with Video - Dark Theme -->
+    <section class="hero-section hero-dark">
+      <div class="container">
+        <!-- Announcement Banner -->
+        <div style="max-width: 680px; margin: 0 auto 4.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.18); color: #fff; text-align: center; font-size: 0.95rem;">
+          <span style="font-size: 1.15rem; vertical-align: middle;">🎉</span>
+          <strong>WebODM has officially decoupled from OpenDroneMap!</strong>
+          <a href="/blog/announcement" style="color: #7dd3fc; margin-left: 0.4rem; text-decoration: none; font-weight: 500;">Read the announcement</a>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h1>WebODM</h1>
+            <h2>The free and open source drone mapping software.</h2>
+            <p class="lead mb-4">Generate maps, point clouds, DEMs and 3D models from aerial images. Runs on your computer, even offline.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="/download" class="btn btn-primary btn-lg">
+                <i class="bi bi-download me-2"></i>Download
+              </a>
+              <a href="https://docs.webodm.org" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-book me-2"></i>Documentation
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/MEfqpss0HBU" 
+                      title="WebODM Video" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowfullscreen
+                      style="border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="bg-transparent" style="padding-top: 40px">
+      <div class="container" style="max-width: 900px;">
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-subtitle">To get started with drone mapping, minus the price tag.</p>
+        
+        <div class="text-center" style="margin-bottom: 40px">
+          <img src="/images/map.jpg" class="software-screenshot" alt="WebODM Map View">
+        </div>
+        <div class="text-center">
+          <img src="/images/3d.jpg" class="software-screenshot" alt="WebODM 3D View">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding bg-transparent">
+      <div class="container">
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/orthomosaics-130x130.png" alt="Orthomosaics" class="feature-img">
+              <h5 class="fw-bold">Orthomosaics</h5>
+              <p>Georeferenced, orthorectified maps.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/pointcloud.jpg" alt="Point Clouds" class="feature-img">
+              <h5 class="fw-bold">Point Clouds</h5>
+              <p>Georeferenced, filtered and classified dense point clouds.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/dem-130x130.png" alt="Elevation Models" class="feature-img">
+              <h5 class="fw-bold">Elevation Models</h5>
+              <p>Georeferenced digital elevation models (DSMs and DTMs).</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/3dmodels-130x130.png" alt="3D Models" class="feature-img">
+              <h5 class="fw-bold">3D Models</h5>
+              <p>Textured 3D models in .OBJ and OGC 3D Tiles format.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/volume-130x130.png" alt="Measurements" class="feature-img">
+              <h5 class="fw-bold">Measurements</h5>
+              <p>Make volume and area measurements with ease, track stockpiles.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/ndvi.jpg" alt="Plant Health" class="feature-img">
+              <h5 class="fw-bold">Plant Health</h5>
+              <p>Easily compute NDVI, VARI, GNDVI and many other indexes.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/gcp-130x130.png" alt="Ground Control Points" class="feature-img">
+              <h5 class="fw-bold">Ground Control Points</h5>
+              <p>Create and use GCPs for additional accuracy.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/contours.png" alt="Contours" class="feature-img">
+              <h5 class="fw-bold">Contours</h5>
+              <p>Preview and export elevation contours to AutoCAD, ShapeFile, GeoPackage.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/cameralens.jpg" alt="Any Camera" class="feature-img">
+              <h5 class="fw-bold">Any Camera</h5>
+              <p>From consumer phones to professional cameras (standard, fisheye, 360°).</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/images.png" alt="Any Format" class="feature-img">
+              <h5 class="fw-bold">Any Format</h5>
+              <p>JPGs and TIFFs (8bit and 16bit), with or without EXIFs.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/cameraori.jpg" alt="Any Orientation" class="feature-img">
+              <h5 class="fw-bold">Any Orientation</h5>
+              <p>Process aerial and ground images, captured nadir or oblique.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/multispec.jpg" alt="Multispectral" class="feature-img">
+              <h5 class="fw-bold">Multispectral</h5>
+              <p>Process multispectral images.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/rollingshutter.jpg" alt="Rolling Shutter" class="feature-img">
+              <h5 class="fw-bold">Rolling Shutter</h5>
+              <p>Correction support.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/share-130x130.png" alt="Share" class="feature-img">
+              <h5 class="fw-bold">Share</h5>
+              <p>Easily share your maps and 3D models.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/rebrand-130x130.png" alt="Rebrand" class="feature-img">
+              <h5 class="fw-bold">Rebrand</h5>
+              <p>Choose a logo and color scheme that matches your organization.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/scale.jpg" alt="Scale" class="feature-img">
+              <h5 class="fw-bold">Scale</h5>
+              <p>Run multiple jobs in parallel and single jobs distributed on multiple machines.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/export-130x130.png" alt="Export" class="feature-img">
+              <h5 class="fw-bold">Export</h5>
+              <p>High resolution GeoTIFF, PNG, LAS/LAZ, OBJ and OGC 3D Tiles formats.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/flags.jpg" alt="Multi Language" class="feature-img">
+              <h5 class="fw-bold">Multi Language</h5>
+              <p>Available in 16+ languages.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/speed.jpg" alt="GPU Acceleration" class="feature-img">
+              <h5 class="fw-bold">GPU Acceleration</h5>
+              <p>Process datasets faster with CUDA.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card h-100 text-center">
+              <img src="/images/features/affordable.png" alt="Affordable" class="feature-img">
+              <h5 class="fw-bold">Affordable</h5>
+              <p>You just can't beat the price.</p>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="/download" class="btn btn-primary btn-lg">
+            <i class="bi bi-download me-2"></i>Download
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="section-padding" style="background: #f8fafc;">
+      <div class="container text-center" style="max-width: 640px;">
+        <i class="bi bi-people-fill" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+        <h2 class="fw-bold mt-3 mb-3">Join the Community</h2>
+        <p style="color: #475569; line-height: 1.8;">Whether you contribute code, improve translations, write documentation or simply share your maps, your voice matters. Come build with us.</p>
+        <a href="/community" class="btn btn-primary mt-2">Get Involved</a>
+
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section class="section-padding bg-transparent">
+      <div class="container text-center">
+        <h2 class="fw-bold mt-3 mb-3">Meet the WebODM Ecosystem</h2>
+        <p class="section-subtitle"></p>
+        <p style="max-width: 720px; margin: 0 auto 3rem; color: #475569; line-height: 1.8;">
+          Pick and choose the parts you need for processing aerial data at any scale.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card h-100 text-center ecosystem-card">
+              <div class="ecosystem-icon">
+                <i class="bi bi-terminal"></i>
+              </div>
+              <h5 class="fw-bold">ODM</h5>
+              <p>A command line toolkit to process aerial images. Since its creation in 2014, it has become the de-facto standard of open source drone image processing.</p>
+              <a href="https://github.com/WebODM/ODM" class="btn btn-outline-primary btn-sm mt-auto">Go To Project</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card h-100 text-center ecosystem-card">
+              <div class="ecosystem-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h5 class="fw-bold">NodeODM</h5>
+              <p>A lightweight REST API to access ODM. It also provides a minimal web interface to access its functions.</p>
+              <a href="https://github.com/WebODM/NodeODM" class="btn btn-outline-primary btn-sm mt-auto">Go To Project</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card h-100 text-center ecosystem-card">
+              <div class="ecosystem-icon">
+                <i class="bi bi-cloud"></i>
+              </div>
+              <h5 class="fw-bold">CloudODM</h5>
+              <p>A command line tool to process aerial imagery in the cloud.</p>
+              <a href="https://github.com/WebODM/CloudODM" class="btn btn-outline-primary btn-sm mt-auto">Go To Project</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card h-100 text-center ecosystem-card">
+              <div class="ecosystem-icon">
+                <i class="bi bi-plug"></i>
+              </div>
+              <h5 class="fw-bold">PyODM</h5>
+              <p>A Python SDK for adding aerial image processing capabilities to applications.</p>
+              <a href="https://github.com/WebODM/PyODM" class="btn btn-outline-primary btn-sm mt-auto">Go To Project</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card h-100 text-center ecosystem-card">
+              <div class="ecosystem-icon">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <h5 class="fw-bold">ClusterODM</h5>
+              <p>A NodeODM API compatible reverse proxy, load balancer and task tracker for easy horizontal scaling.</p>
+              <a href="https://github.com/WebODM/ClusterODM" class="btn btn-outline-primary btn-sm mt-auto">Go To Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 20px; margin-right: 20px; text-align: right;">
+        <small><i>Background image courtesy of: Carlos H. Grohmann</i></small>
+      </div>
+    </section>
+
+{% endblock content %}

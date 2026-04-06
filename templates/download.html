@@ -1,0 +1,533 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+  .download-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 1rem 6rem;
+  }
+
+  .download-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .download-page .lead {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── three-button row ── */
+  .os-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .os-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .os-btn:hover,
+  .os-btn.active {
+    border-color: var(--primary-color);
+    background: #f0f7ff;
+  }
+
+  .os-btn i {
+    font-size: 1.15rem;
+  }
+
+  /* ── expand panel ── */
+  .os-panel {
+    display: none;
+    margin-top: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .os-panel.open {
+    display: block;
+  }
+
+  /* ── radio-driven panels (SEO-friendly, no JS for visibility) ── */
+  input[name="os-select"] {
+    display: none;
+  }
+
+  #os-windows:checked ~ .os-row .os-btn[for="os-windows"],
+  #os-macos:checked ~ .os-row .os-btn[for="os-macos"],
+  #os-linux:checked ~ .os-row .os-btn[for="os-linux"] {
+    border-color: var(--primary-color);
+    background: #f0f7ff;
+  }
+
+  .os-panel-windows,
+  .os-panel-macos,
+  .os-panel-linux {
+    display: none;
+    margin-top: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+  }
+
+  #os-windows:checked ~ .os-panel-windows,
+  #os-macos:checked ~ .os-panel-macos,
+  #os-linux:checked ~ .os-panel-linux {
+    display: block;
+  }
+
+  .dl-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .dl-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .dl-item a {
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .dl-item .desc {
+    color: #64748b;
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 600px) {
+    .os-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── FAQ section ── */
+  .faq-section {
+    padding-top: 3rem;
+  }
+
+  .faq-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .faq-subheading {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 0.25rem;
+    font-weight: 600;
+    font-size: 0.97rem;
+    cursor: pointer;
+    list-style: none;
+    color: #1e293b;
+    transition: color 0.15s;
+    user-select: none;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::marker {
+    content: '';
+  }
+
+  .faq-question:hover {
+    color: var(--primary-color);
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    color: #94a3b8;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 0.25rem 1.25rem;
+    color: #475569;
+    font-size: 0.93rem;
+    line-height: 1.7;
+  }
+
+  .faq-answer p {
+    margin: 0 0 0.6rem;
+  }
+
+  .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .faq-answer a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── System Requirements section ── */
+  .sysreq-section {
+    padding-top: 3rem;
+  }
+
+  .sysreq-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .sysreq-subheading {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .sysreq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .sysreq-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .sysreq-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .sysreq-card h3 .sysreq-icon {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+  }
+
+  .sysreq-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+  }
+
+  .sysreq-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sysreq-card ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .sysreq-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-color);
+  }
+
+  .sysreq-card ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .sysreq-card .os-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 1.1rem 0 0.5rem;
+  }
+
+  .sysreq-card .os-title:first-of-type {
+    margin-top: 0;
+  }
+
+  .sysreq-note {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .sysreq-note a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .sysreq-note a:hover {
+    text-decoration: underline;
+  }
+
+  .sysreq-warning {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  @media (max-width: 640px) {
+    .sysreq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<section class="download-page">
+  <h1>Download WebODM</h1>
+  <p class="lead">100% Free. Choose your operating system to see available options.</p>
+
+  <input type="radio" name="os-select" id="os-windows">
+  <input type="radio" name="os-select" id="os-macos">
+  <input type="radio" name="os-select" id="os-linux">
+
+  <div class="os-row">
+    <label class="os-btn" for="os-windows">
+      <i class="bi bi-windows"></i> Windows
+    </label>
+    <label class="os-btn" for="os-macos">
+      <i class="bi bi-apple"></i> macOS
+    </label>
+    <label class="os-btn" for="os-linux">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tux" viewBox="0 0 16 16">
+  <path d="M8.996 4.497c.104-.076.1-.168.186-.158s.022.102-.098.207c-.12.104-.308.243-.46.323-.291.152-.631.336-.993.336s-.647-.167-.853-.33c-.102-.082-.186-.162-.248-.221-.11-.086-.096-.207-.052-.204.075.01.087.109.134.153.064.06.144.137.241.214.195.154.454.304.778.304s.702-.19.932-.32c.13-.073.297-.204.433-.304M7.34 3.781c.055-.02.123-.031.174-.003.011.006.024.021.02.034-.012.038-.074.032-.11.05-.032.017-.057.052-.093.054-.034 0-.086-.012-.09-.046-.007-.044.058-.072.1-.089m.581-.003c.05-.028.119-.018.173.003.041.017.106.045.1.09-.004.033-.057.046-.09.045-.036-.002-.062-.037-.093-.053-.036-.019-.098-.013-.11-.051-.004-.013.008-.028.02-.034"/>
+  <path fill-rule="evenodd" d="M8.446.019c2.521.003 2.38 2.66 2.364 4.093-.01.939.509 1.574 1.04 2.244.474.56 1.095 1.38 1.45 2.32.29.765.402 1.613.115 2.465a.8.8 0 0 1 .254.152l.001.002c.207.175.271.447.329.698.058.252.112.488.224.615.344.382.494.667.48.922-.015.254-.203.43-.435.57-.465.28-1.164.491-1.586 1.002-.443.527-.99.83-1.505.871a1.25 1.25 0 0 1-1.256-.716v-.001a1 1 0 0 1-.078-.21c-.67.038-1.252-.165-1.718-.128-.687.038-1.116.204-1.506.206-.151.331-.445.547-.808.63-.5.114-1.126 0-1.743-.324-.577-.306-1.31-.278-1.85-.39-.27-.057-.51-.157-.626-.384-.116-.226-.095-.538.07-.988.051-.16.012-.398-.026-.648a2.5 2.5 0 0 1-.037-.369c0-.133.022-.265.087-.386v-.002c.14-.266.368-.377.577-.451s.397-.125.53-.258c.143-.15.27-.374.443-.56q.036-.037.073-.07c-.081-.538.007-1.105.192-1.662.393-1.18 1.223-2.314 1.811-3.014.502-.713.65-1.287.701-2.016.042-.997-.705-3.974 2.112-4.2q.168-.015.321-.013m2.596 10.866-.03.016c-.223.121-.348.337-.427.656-.08.32-.107.733-.13 1.206v.001c-.023.37-.192.824-.31 1.267s-.176.862-.036 1.128v.002c.226.452.608.636 1.051.601s.947-.304 1.36-.795c.474-.576 1.218-.796 1.638-1.05.21-.126.324-.242.333-.4.009-.157-.097-.403-.425-.767-.17-.192-.217-.462-.274-.71-.056-.247-.122-.468-.26-.585l-.001-.001c-.18-.157-.356-.17-.565-.164q-.069.001-.14.005c-.239.275-.805.612-1.197.508-.359-.09-.562-.508-.587-.918m-7.204.03H3.83c-.189.002-.314.09-.44.225-.149.158-.276.382-.445.56v.002h-.002c-.183.184-.414.239-.61.31-.195.069-.353.143-.46.35v.002c-.085.155-.066.378-.029.624.038.245.096.507.018.746v.002l-.001.002c-.157.427-.155.678-.082.822.074.143.235.22.48.272.493.103 1.26.069 1.906.41.583.305 1.168.404 1.598.305.431-.098.712-.369.75-.867v-.002c.029-.292-.195-.673-.485-1.052-.29-.38-.633-.752-.795-1.09v-.002l-.61-1.11c-.21-.286-.43-.462-.68-.5a1 1 0 0 0-.106-.008M9.584 4.85c-.14.2-.386.37-.695.467-.147.048-.302.17-.495.28a1.3 1.3 0 0 1-.74.19.97.97 0 0 1-.582-.227c-.14-.113-.25-.237-.394-.322a3 3 0 0 1-.192-.126c-.063 1.179-.85 2.658-1.226 3.511a5.4 5.4 0 0 0-.43 1.917c-.68-.906-.184-2.066.081-2.568.297-.55.343-.701.27-.649-.266.436-.685 1.13-.848 1.844-.085.372-.1.749.01 1.097.11.349.345.67.766.931.573.351.963.703 1.193 1.015s.302.584.23.777a.4.4 0 0 1-.212.22.7.7 0 0 1-.307.056l.184.235c.094.124.186.249.266.375 1.179.805 2.567.496 3.568-.218.1-.342.197-.664.212-.903.024-.474.05-.896.136-1.245s.244-.634.53-.791a1 1 0 0 1 .138-.061q.005-.045.013-.087c.082-.546.569-.572 1.18-.303.588.266.81.499.71.814h.13c.122-.398-.133-.69-.822-1.025l-.137-.06a2.35 2.35 0 0 0-.012-1.113c-.188-.79-.704-1.49-1.098-1.838-.072-.003-.065.06.081.203.363.333 1.156 1.532.727 2.644a1.2 1.2 0 0 0-.342-.043c-.164-.907-.543-1.66-.735-2.014-.359-.668-.918-2.036-1.158-2.983M7.72 3.503a1 1 0 0 0-.312.053c-.268.093-.447.286-.559.391-.022.021-.05.04-.119.091s-.172.126-.321.238q-.198.151-.13.38c.046.15.192.325.459.476.166.098.28.23.41.334a1 1 0 0 0 .215.133.9.9 0 0 0 .298.066c.282.017.49-.068.673-.173s.34-.233.518-.29c.365-.115.627-.345.709-.564a.37.37 0 0 0-.01-.309c-.048-.096-.148-.187-.318-.257h-.001c-.354-.151-.507-.162-.705-.29-.321-.207-.587-.28-.807-.279m-.89-1.122h-.025a.4.4 0 0 0-.278.135.76.76 0 0 0-.191.334 1.2 1.2 0 0 0-.051.445v.001c.01.162.041.299.102.436.05.116.109.204.183.274l.089-.065.117-.09-.023-.018a.4.4 0 0 1-.11-.161.7.7 0 0 1-.054-.22v-.01a.7.7 0 0 1 .014-.234.4.4 0 0 1 .08-.179q.056-.069.126-.073h.013a.18.18 0 0 1 .123.05c.045.04.08.09.11.162a.7.7 0 0 1 .054.22v.01a.7.7 0 0 1-.002.17 1.1 1.1 0 0 1 .317-.143 1.3 1.3 0 0 0 .002-.194V3.23a1.2 1.2 0 0 0-.102-.437.8.8 0 0 0-.227-.31.4.4 0 0 0-.268-.102m1.95-.155a.63.63 0 0 0-.394.14.9.9 0 0 0-.287.376 1.2 1.2 0 0 0-.1.51v.015q0 .079.01.152c.114.027.278.074.406.138a1 1 0 0 1-.011-.172.8.8 0 0 1 .058-.278.5.5 0 0 1 .139-.2.26.26 0 0 1 .182-.069.26.26 0 0 1 .178.081c.055.054.094.12.124.21.029.086.042.17.04.27l-.002.012a.8.8 0 0 1-.057.277c-.024.059-.089.106-.122.145.046.016.09.03.146.052a5 5 0 0 1 .248.102 1.2 1.2 0 0 0 .244-.763 1.2 1.2 0 0 0-.11-.495.9.9 0 0 0-.294-.37.64.64 0 0 0-.39-.133z"/>
+</svg> Linux
+    </label>
+  </div>
+
+  <div class="os-panel-windows">
+    <div class="dl-item">
+      <a href="https://github.com/WebODM/WebODM/releases/download/v3.2.0/WebODM_Setup.exe" rel="noopener">WebODM Installer v3.2.0</a>
+      <span class="desc">— One-click setup, installs everything you need.</span>
+    </div>
+    <div class="dl-item">
+      <a href="https://docs.webodm.org/installation/" target="_blank" rel="noopener">Docker</a>
+      <span class="desc">— Run WebODM in a container. Recommended for power users.</span>
+    </div>
+  </div>
+
+  <div class="os-panel-macos">
+    <div class="dl-item">
+      <a href="https://github.com/WebODM/WebODM/releases/download/v3.1.4/WebODM_Manager.dmg" rel="noopener">macOS Installer</a>
+      <span class="desc">— One-click setup, installs everything you need.</span>
+    </div>
+    <div class="dl-item">
+      <a href="https://docs.webodm.org/installation/" target="_blank" rel="noopener">Docker</a>
+      <span class="desc">— Run WebODM in a container. Recommended for power users.</span>
+    </div>
+  </div>
+
+  <div class="os-panel-linux">
+    <div class="dl-item">
+      <a href="https://docs.webodm.org/installation/" target="_blank" rel="noopener">Docker</a>
+      <span class="desc">— Install and run WebODM via Docker on any Linux distribution.</span>
+    </div>
+  </div>
+
+  <div style="margin-top: 2.5rem;" class="note">
+    You can download and use the software free of charge. If you like it, consider purchasing a month of
+    <a href="https://webodm.net" target="_blank" rel="noopener">WebODM Lightning</a>
+    which directly funds development efforts, give a shout-out on social media or just come say hi on <a href="https://discord.gg/RxHPXCSMBS" target="_blank">discord</a>. Thank you! ❤️
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2 class="faq-heading mb-4">Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can WebODM process my dataset?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>In general, if your images are JPEGs or TIFFs, come from a stock drone and your computer is powerful enough, yes. The ability of WebODM to process a dataset relies mostly on the availability of sufficient memory to complete the task.</p>
+          <p>With the recommended amount of RAM you should be able to easily process at least 100–300 images. If your computer is not very powerful and you have lots of images, check <a href="https://webodm.net">WebODM Lightning</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Does WebODM use Docker?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p><b>Windows</b>: no, it runs natively if you use the installer.</p>
+          <p><b>macOS and Linux</b>: yes. The macOS installer is simply a manager program to help you setup WebODM with docker.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can I run WebODM on Linux?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes, of course! Linux is actually our <strong>best supported platform</strong>. Simply follow the instructions provided in the <a href="https://docs.webodm.org/installation/" target="_blank" rel="noopener">installation guide</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can I run WebODM on Apple Silicon (M1/M2/M3/M4)?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes! Apple Silicon is fully supported and it's pretty fast too.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>What are the minimum system requirements?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>You'll need at least <strong>20 GB</strong> of free disk space and <strong>8 GB RAM</strong> (16 GB or more recommended). A 64-bit CPU is required. With 8 GB of RAM, you may not be able to process more than 100 images. For larger datasets, 16 GB RAM and 100 GB disk space are recommended, or consider using <a href="https://webodm.net" target="_blank" rel="noopener">WebODM Lightning</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>How does WebODM compare to proprietary software?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Comparable or better. Don't take our word. Try it and see for yourself!</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Where can I get help?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>There are several independent WebODM <a href="/community">communities</a> where users and contributors help each other. Check also the <a href="https://docs.webodm.org">documentation</a>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- System Requirements Section -->
+  <div class="sysreq-section">
+    <h2 class="sysreq-heading mb-4">System Requirements</h2>
+
+    <div class="sysreq-grid">
+      <div class="sysreq-card">
+        <h3><span class="sysreq-icon"><i class="bi bi-cpu"></i></span> Minimum</h3>
+        <div class="sysreq-label">Minimum specs</div>
+        
+        <ul>
+          <li>20 GB free disk space</li>
+          <li>8 GB RAM &ast;</li>
+        </ul>
+
+        <div class="os-title"><i class="bi bi-windows"></i>&ensp;Windows</div>
+        <ul>
+          <li>Windows 10 or newer</li>
+          <li>64-bit CPU with SSE3/SSSE3 support. Windows on Arm is not supported.</li>
+        </ul>
+
+        <div class="os-title"><i class="bi bi-apple"></i>&ensp;macOS</div>
+        <ul>
+          <li>macOS 13 or newer. Apple Silicon (M1+) is supported.</li>
+          <li>Mac hardware from 2010 or newer that supports virtualization</li>
+        </ul>
+
+        <p class="sysreq-note">&ast; You will not be able to process more than ~100 images with 8 GB of RAM. For larger datasets, see the Recommended requirements or check <a href="https://webodm.net" target="_blank" rel="noopener">WebODM Lightning</a>.</p>
+        <p class="sysreq-note">WebODM does not work on 32-bit computers.</p>
+      </div>
+
+      <div class="sysreq-card">
+        <h3><span class="sysreq-icon"><i class="bi bi-rocket-takeoff"></i></span> Recommended</h3>
+        <div class="sysreq-label">For the best experience</div>
+
+        <p style="font-size:0.9rem;color:#334155;margin:0 0 0.8rem;">Same as minimum requirements, plus more storage and memory:</p>
+        <ul>
+          <li>100 GB free disk space</li>
+          <li>16 GB RAM or more</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock content %}
