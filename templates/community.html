@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+  .community-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 1rem 6rem;
+  }
+
+  .community-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .community-page .lead {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── section headings ── */
+  .community-page .section-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .community-page .section-heading i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+
+  /* ── group cards ── */
+  .community-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .community-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .community-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .community-card h3 .flag {
+    font-size: 1.15rem;
+  }
+
+  .community-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .community-link-list li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.15s;
+  }
+
+  .community-link-list li a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+
+  .community-link-list li a i {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ── add your community box ── */
+  .add-community-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: #475569;
+    font-size: 0.92rem;
+    margin-bottom: 3rem;
+  }
+
+  .add-community-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .add-community-box a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── get involved section ── */
+  .involve-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .involve-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.35rem 1.25rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .involve-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .involve-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+  }
+
+  .involve-card h4 {
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+  }
+
+  .involve-card p {
+    font-size: 0.88rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .involve-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .involve-card a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── hero banner ── */
+  .community-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 640px) {
+    .involve-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<div class="community-page">
+
+  <!-- Hero -->
+  <div class="community-hero">
+    <h1>Community</h1>
+    <p class="lead">Anywhere you are, find independent WebODM groups around the globe.</p>
+  </div>
+
+  <!-- Community Groups -->
+  <h2 class="section-heading"><i class="bi bi-chat-dots"></i> Community Groups</h2>
+
+  <div class="community-card">
+    <h3>English</h3>
+    <ul class="community-link-list">
+      <li><a href="https://discord.gg/RxHPXCSMBS"><i class="bi bi-discord"></i> WebODM on Discord</a></li>
+      <li><a href="https://www.linkedin.com/groups/12611169/"><i class="bi bi-linkedin"></i> WebODM Users Group on LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/groups/3272978506331250"><i class="bi bi-facebook"></i> WebODM Users Group on Facebook</a></li>
+    </ul>
+  </div>
+
+  <div class="community-card">
+    <h3>Italian / Italiano</h3>
+    <ul class="community-link-list">
+      <li><a href="https://www.linkedin.com/groups/9183076/"><i class="bi bi-linkedin"></i> WebODM Users Italy on LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/groups/742535070086754"><i class="bi bi-facebook"></i> WebODM Italia on Facebook</a></li>
+    </ul>
+  </div>
+
+  <div class="add-community-box">
+    Want to list your community? Get in touch on <a href="https://discord.gg/RxHPXCSMBS">Discord</a>.
+  </div>
+
+  <!-- Get Involved -->
+  <h2 class="section-heading"><i class="bi bi-hand-thumbs-up"></i> Get Involved</h2>
+  <p style="color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+    WebODM is being made by hundreds of people from all over the world &mdash; scientists, professionals, students and hobbyists &mdash; all united by the desire to have awesome free and open source drone mapping software.
+  </p>
+
+  <div class="involve-grid">
+    <div class="involve-card">
+      <div class="involve-icon"><i class="bi bi-code-slash"></i></div>
+      <div>
+        <h4>Contribute Code</h4>
+        <p>Help improve WebODM on <a href="https://github.com/WebODM/WebODM">GitHub</a> or <a href="https://github.com/WebODM/WebODM/issues">report bugs</a>. We can occasionally fund development efforts too.</p>
+      </div>
+    </div>
+    <div class="involve-card">
+      <div class="involve-icon"><i class="bi bi-translate"></i></div>
+      <div>
+        <h4>Translate</h4>
+        <p>Help translate the software via <a href="https://hosted.weblate.org/projects/webodm/">WebODM on Weblate</a>.</p>
+      </div>
+    </div>
+    <div class="involve-card">
+      <div class="involve-icon"><i class="bi bi-book"></i></div>
+      <div>
+        <h4>Documentation</h4>
+        <p>Help improve or translate the <a href="https://docs.webodm.org">documentation</a>.</p>
+      </div>
+    </div>
+    <div class="involve-card">
+      <div class="involve-icon"><i class="bi bi-megaphone"></i></div>
+      <div>
+        <h4>Spread the Word</h4>
+        <p>Share your experience at local meetups, conferences and on social media to get people interested.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock content %}
