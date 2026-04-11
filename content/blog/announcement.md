@@ -24,7 +24,7 @@ I invite existing users, developers and contributors to join me in this exciting
 
 For the past 3 years, the OpenDroneMap organization, which was established by my co-founder and holds the rights to the name OpenDroneMap, has not contributed or supported in any substantial way the development of WebODM.
 
-Despite commitments to adopt more [transparent](https://community.opendronemap.org/t/org-transparency-thread/25747) policies, to date it's still difficult to objectively quantify the true commitments of the OpenDroneMap organization. While their public posturing tries to depict an image of a supportive entity, their actions and results, or lack thereof, indicate otherwise. I encourage people to look at the facts and results, rather than their words.
+Despite commitments to adopt more [transparent](https://community.opendronemap.org/t/org-transparency-thread/25747) policies, to date it's still difficult to objectively quantify the true commitments of the OpenDroneMap organization. While their public posturing tries to depict an image of a supportive entity, their actions and results, or lack thereof, indicate otherwise. I encourage people to look at the facts and results, rather than the words.
 
 ## Roadmap and Call for Participants
 
