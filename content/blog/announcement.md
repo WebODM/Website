@@ -34,9 +34,9 @@ In the short term focus will be on:
  * Fixing NVIDIA GeForce RTX 50 Series support on Windows
  * Adding support for checkpoints
  * Updating and expanding the documentation at [docs.webodm.org](https://docs.webodm.org)
- * Setup a [community directory](/community) and social media channels
+ * Setup a [community directory](/community)
 
-If you want to help and be part of this new chapter in WebODM history, you can join [discord](https://discord.gg/RxHPXCSMBS) and provide your ideas and feedback for where the project should go (or just come say hi!). You can also help improve the [documentation](https://docs.webodm.org), the [code](https://github.com/WebODM/WebODM), the [translations](https://hosted.weblate.org/projects/webodm/) or start a WebODM community on your favorite platform (if one does not exist already). For the latter, once you do ping me on discord and I can add it to our [directory](/community). Foreign language speakers are most welcome to start regional chapters of WebODM communities in their own language. 
+If you want to help and be part of this new chapter in WebODM history, you can join [discord](https://discord.gg/RxHPXCSMBS) and provide your ideas and feedback for where the project should go (or just come say hi!). You can also help improve the [documentation](https://docs.webodm.org), the [code](https://github.com/WebODM/WebODM), the [translations](https://hosted.weblate.org/projects/webodm/) or start a WebODM community on your favorite platform. For the latter, once you do ping me on discord and I can add it to our [directory](/community). Foreign language speakers are most welcome to start regional chapters of WebODM communities in their own language. 
 
 Welcome to this new chapter. There's lots of work to do. Let's build something beautiful, together.
 

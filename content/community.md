@@ -30,7 +30,4 @@ WebODM is being made by hundreds of people from all over the world. From scienti
 * You can help us improve or translate our [documentation](https://docs.webodm.org)
 * Share your experience with others! Local meetups, conferences and word-of-mouth are all great avenues for getting people interested.
 
-## Social Media
-
-We're working to get a social media presence. If you'd like to help, get in touch on [discord](https://discord.gg/RxHPXCSMBS).
 
