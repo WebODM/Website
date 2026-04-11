@@ -8,7 +8,7 @@ description = "WebODM continues as an independent project with more frequent rel
 
 by [Piero Toffanin](https://github.com/pierotofy) - April 6th 2026
 
-Some relationships are made to last. Sometimes others just don't work out. Due to some irreconcilable differences with my [co-founder](https://community.opendronemap.org/u/smathermather/summary) of OpenDroneMap, WebODM will continue and accelerate its mission of providing the most awesome open source drone mapping software as a separate, independent project going forward.
+Some relationships are made to last. Sometimes others just don't work out. Due to some irreconcilable differences with my [co-founder](https://community.opendronemap.org/u/smathermather/summary) of the OpenDroneMap project, WebODM will continue and accelerate its mission of providing the most awesome open source drone mapping software as a separate, independent project going forward.
 
 I invite existing users, developers and contributors to join me in this exciting new chapter. We'll build something beautiful, together.
 
@@ -18,7 +18,13 @@ I invite existing users, developers and contributors to join me in this exciting
  * Expect more frequent release cycles, bug fixes and features.
  * You can now [download](/download) and install the latest version of WebODM **free of charge** on all platforms, including native installers for Windows and macOS distributed and signed by the WebODM developers.
  * If you use [ODM](https://github.com/WebODM/ODM) or [NodeODM](https://github.com/WebODM/NodeODM), stable docker images will continue to receive updates and improvements at `webodm/odm` and `webodm/nodeodm`.
- * I've forked [ODM](https://github.com/WebODM/ODM) and brought related projects under the WebODM organization where they continue to be actively maintained and updated. Given my [expertise](https://github.com/WebODM/ODM/graphs/contributors) I expect our fork to succeed and pull light years ahead. 
+ * I've forked [ODM](https://github.com/WebODM/ODM) and brought related projects under the WebODM organization where they continue to be actively maintained and updated.
+
+## What Happened?
+
+For the past 3 years, the OpenDroneMap organization, which was established by my co-founder and holds the rights to the name OpenDroneMap, has not contributed or supported in any substantial way the development of WebODM.
+
+Despite commitments to adopt more [transparent](https://community.opendronemap.org/t/org-transparency-thread/25747) policies, to date it's still difficult to objectively quantify the true commitments of the OpenDroneMap organization. While their public posturing tries to depict an image of a supportive entity, their actions and results, or lack thereof, indicate otherwise. I encourage people to look at the facts and results, rather than the words.
 
 ## Roadmap and Call for Participants
 
