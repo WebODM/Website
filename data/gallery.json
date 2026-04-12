@@ -18,5 +18,21 @@
     "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/monitoring-sand-ortho.jpeg",
     "author": "Mark de Haan",
     "title": "Monitoring sand depot / volume calculation / change over time with slider functionality"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/monitoring-sand-ortho.jpeg",
+    "author": "Mark de Haan",
+    "title": "Monitoring sand depot / volume calculation / change over time with slider functionality (DSM)"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/monitoring-sand-pointcloud.jpeg",
+    "author": "Mark de Haan",
+    "title": "Monitoring amount of sand above a specific (permitted) height"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/buffer-strips.jpeg",
+    "author": "Mark de Haan",
+    "title": "Monitoring “Buffer Strips” around waterways"
   }
+  
 ]
