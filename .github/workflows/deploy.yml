@@ -29,6 +29,16 @@ jobs:
         with:
           tool: zola@0.18.0
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build gallery
+        run: |
+          pip install Pillow requests
+          python scripts/build_gallery.py
+
       - name: Build with Zola
         run: zola build
 

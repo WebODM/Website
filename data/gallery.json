@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/blocks-ortho.png",
+    "author": "Mark de Haan",
+    "title": "Monitoring new concrete protection blocks (Orthophoto)"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/blocks-ortho-dsm.png",
+    "author": "Mark de Haan",
+    "title": "Monitoring new concrete protection blocks (Ortho / DSM comparison)"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/blocks-3d-mesh.png",
+    "author": "Mark de Haan",
+    "title": "Monitoring new concrete protection blocks (3D Mesh)"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/monitoring-sand-ortho.jpeg",
+    "author": "Mark de Haan",
+    "title": "Monitoring sand depot / volume calculation / change over time with slider functionality"
+  }
+]

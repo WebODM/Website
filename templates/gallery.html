@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<style>
+  .gallery-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 1rem 6rem;
+  }
+
+  .gallery-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .gallery-page .lead {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: #f1f5f9;
+    aspect-ratio: 16 / 10;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .gallery-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-item .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 0.75rem 0.6rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-overlay .gallery-title {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Lightbox modal */
+  #galleryModal .modal-dialog {
+    max-width: 90vw;
+  }
+
+  #galleryModal .modal-content {
+    background: transparent;
+    border: none;
+    text-align: center;
+  }
+
+  #galleryModal .modal-body {
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #galleryModal .modal-body img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+  }
+
+  #galleryModal .btn-close {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    padding: 0.65rem;
+    opacity: 1;
+  }
+
+  #galleryModal .modal-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin-top: 8px;
+    width: fit-content;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  #galleryModal .modal-caption .caption-title {
+    font-weight: 600;
+  }
+
+  #galleryModal .modal-caption .caption-author {
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+
+  .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 10;
+  }
+
+  .gallery-nav:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .gallery-nav-prev {
+    left: 0.75rem;
+  }
+
+  .gallery-nav-next {
+    right: 0.75rem;
+  }
+
+  .gallery-nav[hidden] {
+    display: none;
+  }
+
+  .gallery-empty {
+    text-align: center;
+    color: #94a3b8;
+    padding: 4rem 1rem;
+  }
+
+  .add-gallery-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: #475569;
+    font-size: 0.92rem;
+    margin-top: 2.5rem;
+  }
+
+  .add-gallery-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .add-gallery-box a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<div class="gallery-page">
+  <h1>Gallery</h1>
+  <p class="lead">See some of the cool things people are doing with the software</p>
+
+  {% set gallery = load_data(path="data/_gallery.json", required=false) %}
+
+  {% if gallery and gallery | length > 0 %}
+  <div class="gallery-grid">
+    {% for item in gallery %}
+    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+         data-full="{{ item.full }}"
+         data-title="{{ item.title }}"
+         data-author="{{ item.author }}">
+      <img src="{{ item.thumb }}" alt="{{ item.title }}" loading="lazy">
+      {% if item.title %}
+      <div class="gallery-overlay">
+        <div class="gallery-title">{{ item.title }}</div>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="gallery-empty">
+    <i class="bi bi-images" style="font-size: 3rem;"></i>
+    <p class="mt-3">No screenshots available yet. Run <code>python build_gallery.py</code> to generate the gallery.</p>
+  </div>
+  {% endif %}
+
+  <div class="add-gallery-box">
+     <i class="bi bi-plus-circle"></i>&ensp;Want to contribute a screenshot? <a href="https://discord.gg/RxHPXCSMBS">Post a link on discord</a> or <a href="https://github.com/WebODM/Website/edit/master/data/gallery.json">open a PR</a>.
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <button type="button" class="gallery-nav gallery-nav-prev" id="galleryPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+      <button type="button" class="gallery-nav gallery-nav-next" id="galleryNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+      <div class="modal-body">
+          <img id="galleryModalImg" src="" alt="">
+          <div class="modal-caption" id="galleryModalCaption"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+(function () {
+  var modal = document.getElementById('galleryModal');
+  if (!modal) return;
+
+  var items = Array.from(document.querySelectorAll('.gallery-item'));
+  var currentIndex = -1;
+  var prevBtn = document.getElementById('galleryPrev');
+  var nextBtn = document.getElementById('galleryNext');
+
+  function esc(s) {
+    return s ? s.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+  }
+
+  function showItem(index) {
+    currentIndex = index;
+    var item = items[index];
+    var full = item.getAttribute('data-full');
+    var title = item.getAttribute('data-title');
+    var author = item.getAttribute('data-author');
+    document.getElementById('galleryModalImg').src = full;
+    document.getElementById('galleryModalImg').alt = title || '';
+    var caption = document.getElementById('galleryModalCaption');
+    var html = '';
+    if (title) html += '<span class="caption-title">' + esc(title) + '</span>';
+    if (title && author) html += '<br>';
+    if (author) html += '<span class="caption-author">' + esc(author) + '</span>';
+    caption.innerHTML = html;
+    prevBtn.hidden = (index === 0);
+    nextBtn.hidden = (index === items.length - 1);
+  }
+
+  modal.addEventListener('show.bs.modal', function (e) {
+    var trigger = e.relatedTarget;
+    if (!trigger) return;
+    var idx = items.indexOf(trigger);
+    if (idx === -1) idx = 0;
+    showItem(idx);
+  });
+
+  prevBtn.addEventListener('click', function () {
+    if (currentIndex > 0) showItem(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (currentIndex < items.length - 1) showItem(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === 'ArrowLeft' && currentIndex > 0) showItem(currentIndex - 1);
+    if (e.key === 'ArrowRight' && currentIndex < items.length - 1) showItem(currentIndex + 1);
+  });
+})();
+</script>
+{% endblock extra_js %}
