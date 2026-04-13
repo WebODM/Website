@@ -430,5 +430,17 @@
     "rtk": false,
     "recommended": true,
     "notes": "Sea Snail Conch. Like the Banana dataset but larger in size."
+  },
+  {
+    "name": "Knypersley Main Pool 1",
+    "url": "https://www.dropbox.com/scl/fi/y9viqa6p1l1u8n3et80jk/26-04-13-Knypersley-Main-Pool-1.zip?rlkey=8in2k70kibnpr9bdcn54lybb2&dl=0",
+    "images": 100,
+    "size_mb": 408,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": false,
+    "notes": "Flown over water"
   }
 ]
