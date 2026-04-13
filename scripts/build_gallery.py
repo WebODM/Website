@@ -11,6 +11,7 @@ Requirements: pip install Pillow requests
 
 import hashlib
 import json
+import random
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -124,6 +125,7 @@ def main():
             "title": title,
         })
 
+    random.shuffle(built)
     with open(BUILT_JSON, "w") as f:
         json.dump(built, f, indent=2)
 
