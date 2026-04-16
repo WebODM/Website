@@ -17,7 +17,7 @@ I invite existing users, developers and contributors to join me in this exciting
  * If you're an existing user of WebODM, you can continue to use the software as normal. Just make sure you are [downloading](/download) from the correct [source](https://github.com/WebODM/WebODM). To avoid confusion, I have asked OpenDroneMap to stop using the WebODM name to identify their software, but this might take a while. I apologize for any confusion in the interim.
  * Expect more frequent release cycles, bug fixes and features.
  * You can now [download](/download) and install the latest version of WebODM **free of charge** on all platforms, including native installers for Windows and macOS distributed and signed by the WebODM developers.
- * If you use [ODM](https://github.com/WebODM/ODM) or [NodeODM](https://github.com/WebODM/NodeODM), stable docker images will continue to receive updates and improvements at `webodm/odm` and `webodm/nodeodm`.
+ * If you use [ODM](https://github.com/WebODM/ODM) or [NodeODM](https://github.com/WebODM/NodeODM), you can find our forks at [ODX](https://github.com/WebODM/ODX] and [NodeODX](https://github.com/WebODM/NodeODX], for which stable docker images will continue to receive updates and improvements at `webodm/odx` and `webodm/nodeodx`.
  * I've forked [ODM](https://github.com/WebODM/ODM) and brought related projects under the WebODM organization where they continue to be actively maintained and updated.
 
 ## What Happened?
