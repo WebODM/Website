@@ -41,3 +41,5 @@ If you want to help and be part of this new chapter in WebODM history, you can j
 Welcome to this new chapter. There's lots of work to do. Let's build something beautiful, together.
 
 *-Piero*
+
+p.s. if you have colleagues or friends that use WebODM, please help me share the news.
