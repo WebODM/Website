@@ -8,7 +8,7 @@ description = "WebODM continues as an independent project with more frequent rel
 
 by [Piero Toffanin](https://github.com/pierotofy) - April 6th 2026
 
-Some relationships are made to last. Sometimes others just don't work out. Due to some irreconcilable differences with my [co-founder](https://community.opendronemap.org/u/smathermather/summary) of the OpenDroneMap project, WebODM will continue and accelerate its mission of providing the most awesome open source drone mapping software as a separate, independent project going forward.
+Some relationships are made to last. Sometimes others just don't work out. Due to some irreconcilable differences with my [co-founder](https://smathermather.com/) of the OpenDroneMap project, WebODM will continue and accelerate its mission of providing the most awesome open source drone mapping software as a separate, independent project going forward.
 
 I invite existing users, developers and contributors to join me in this exciting new chapter. We'll build something beautiful, together.
 
