@@ -51,5 +51,15 @@
     "url": "https://microlinux.github.io/images/webodm_gallery_cabin.png",
     "author": "Airwolf",
     "title": "Cabin in the woods"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/pisa-tower-3d.jpeg",
+    "author": "Luca Bonuccelli",
+    "title": "Pisa Climbing Tower - 3D"
+  },
+  {
+    "url": "https://github.com/WebODM/Website/releases/download/v1.0.0/pisa-tower-dsm.jpeg",
+    "author": "Luca Bonuccelli",
+    "title": "Pisa Climbing Tower - DSM"
   }
 ]
