@@ -1,6 +1,6 @@
 +++
 title = "OpenDroneMap in 2026"
-description = "About OpenDroneMap, including the relationship with WebODM, installers and more"
+description = "Up to date information about OpenDroneMap, including its relationship with WebODM, installers and more"
 +++
 
 # OpenDroneMap
