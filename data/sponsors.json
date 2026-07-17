@@ -1,0 +1,8 @@
+{
+  "_help": "Members shown on the home page and /fund. Gold, Silver and Bronze entries need a logo (SVG or PNG with a transparent background, placed in static/images/sponsors/) and may add a url. Supporter entries only need a name. A tier with an empty array is not rendered.",
+
+  "gold": [],
+  "silver": [],
+  "bronze": [],
+  "supporter": []
+}

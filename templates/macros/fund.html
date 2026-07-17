@@ -1,0 +1,81 @@
+{# ---------------------------------------------------------------------------
+   Shared rendering for the member credits.
+   --------------------------------------------------------------------------- #}
+
+
+{# A row of logos for one tier. #}
+{% macro logo_band(title, members, size) %}
+{% if members | length > 0 %}
+<div class="credits-band">
+    <div class="credits-band-title">{{ title }}</div>
+    <div class="credits-logos">
+        {% for m in members %}
+            {% if m.url %}
+            <a href="{{ m.url }}" target="_blank" rel="noopener sponsored" class="credits-logo size-{{ size }}" title="{{ m.name }}">
+                <img src="{{ m.logo }}" alt="{{ m.name }}" loading="lazy">
+            </a>
+            {% else %}
+            <div class="credits-logo size-{{ size }}" title="{{ m.name }}">
+                <img src="{{ m.logo }}" alt="{{ m.name }}" loading="lazy">
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endmacro logo_band %}
+
+
+{# A wrapped list of names, for the Supporter tier which is credited by name
+   rather than by logo. #}
+{% macro name_band(title, members) %}
+{% if members | length > 0 %}
+<div class="credits-band">
+    <div class="credits-band-title">{{ title }}</div>
+    <div class="credits-names">
+        {% for m in members %}
+            {% if m.url %}
+            <a href="{{ m.url }}" target="_blank" rel="noopener" class="credits-name">{{ m.name }}</a>
+            {% else %}
+            <span class="credits-name">{{ m.name }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endmacro name_band %}
+
+
+{# The empty slot inviting the next member in. Shown once, under whichever bands
+   happen to exist. When nothing exists yet it carries the section title itself,
+   so the credits area never renders as a bare orphaned button. #}
+{% macro cta_band(text, url, title) %}
+<div class="credits-band">
+    {% if title %}<div class="credits-band-title">{{ title }}</div>{% endif %}
+    <div class="credits-logos">
+        <a href="{{ url | safe }}" class="credits-cta size-cta">
+            <i class="bi bi-plus-circle"></i>
+            <span>{{ text }}</span>
+        </a>
+    </div>
+</div>
+{% endmacro cta_band %}
+
+
+{# The full credits block. `cta_url` is where the "add your logo" slot points:
+   the home page sends people to /fund, while /fund itself scrolls to its own
+   membership levels. #}
+{% macro credits(sponsors, cta_url) %}
+    {% set has_any = sponsors.gold | length > 0 or sponsors.silver | length > 0 or sponsors.bronze | length > 0 or sponsors.supporter | length > 0 %}
+
+    {{ self::logo_band(title="Gold Members",   members=sponsors.gold,   size="gold") }}
+    {{ self::logo_band(title="Silver Members", members=sponsors.silver, size="silver") }}
+    {{ self::logo_band(title="Bronze Members", members=sponsors.bronze, size="bronze") }}
+    {{ self::name_band(title="Supporters",     members=sponsors.supporter) }}
+
+    {% if has_any %}
+        {{ self::cta_band(text="Add your logo here?", url=cta_url, title="") }}
+    {% else %}
+        {{ self::cta_band(text="Add your logo here?", url=cta_url, title="Members") }}
+    {% endif %}
+{% endmacro credits %}

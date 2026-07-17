@@ -16,3 +16,6 @@ build_search_index = false
 site_title = "WebODM - Drone Mapping Software"
 site_description = "Free and Open Source Drone Mapping Software"
 primary_color = "#6893d8"
+
+[extra.fund]
+fund_link = "https://forms.gle/zcpG3oDRvEvaSQzy7"
