@@ -68,9 +68,9 @@
 {% macro credits(sponsors, cta_url) %}
     {% set has_any = sponsors.gold | length > 0 or sponsors.silver | length > 0 or sponsors.bronze | length > 0 or sponsors.supporter | length > 0 %}
 
-    {{ self::logo_band(title="Gold Members",   members=sponsors.gold,   size="gold") }}
-    {{ self::logo_band(title="Silver Members", members=sponsors.silver, size="silver") }}
-    {{ self::logo_band(title="Bronze Members", members=sponsors.bronze, size="bronze") }}
+    {{ self::logo_band(title="Gold",   members=sponsors.gold,   size="gold") }}
+    {{ self::logo_band(title="Silver", members=sponsors.silver, size="silver") }}
+    {{ self::logo_band(title="Bronze", members=sponsors.bronze, size="bronze") }}
     {{ self::name_band(title="Supporters",     members=sponsors.supporter) }}
 
     {% if has_any %}

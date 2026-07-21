@@ -674,10 +674,9 @@ body {
 
 /* Slot size scales with tier importance. Applies to logos and to the
    "add your logo here" call to action, so an empty slot lines up with a full one. */
-.credits-logos .size-gold      { height: 110px; width: 260px; }
-.credits-logos .size-silver    { height: 90px;  width: 210px; }
-.credits-logos .size-bronze    { height: 74px;  width: 175px; }
-.credits-logos .size-diamond   { height: 74px;  width: 175px; }
+.credits-logos .size-gold      { height: 121px; width: 286px; }
+.credits-logos .size-silver    { height: 99px;  width: 231px; }
+.credits-logos .size-bronze    { height: 81px;  width: 193px; }
 .credits-logos .size-cta       { height: 90px;  width: 240px; }
 
 /* The "Add your logo here?" call to action, styled as an empty slot */

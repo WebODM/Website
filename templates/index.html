@@ -333,29 +333,22 @@
           </div>
         </div>
       </div>
-      <div style="margin-top: 20px; margin-right: 20px; text-align: right;">
-        <small><i>Background image courtesy of: Carlos H. Grohmann</i></small>
-      </div>
     </section>
 
     <!-- Development Fund / Credits Section -->
     <section class="section-padding" style="background: #f8fafc;">
       <div class="container">
-        <h2 class="section-title">Supported By</h2>
-        <p class="section-subtitle" style="max-width: 720px; margin-left: auto; margin-right: auto;">
-          Some of the generous people and companies that help keep the software free and open source.
-        </p>
+        <h2 class="section-title">Sustaining Members</h2>
 
         <div class="mt-5">
           {% set sponsors = load_data(path="data/sponsors.json") %}
           {{ fund::credits(sponsors=sponsors, cta_url="/fund") }}
         </div>
 
-        <div class="text-center mt-4">
-          <a href="/fund" class="btn btn-primary btn-lg">
-            <i class="bi bi-heart-fill me-2"></i>Fund WebODM
-          </a>
-        </div>
+      </div>
+
+      <div style="margin-top: 20px; margin-right: 20px; text-align: right;">
+        <small><i>Background image courtesy of: Carlos H. Grohmann</i></small>
       </div>
     </section>
 
