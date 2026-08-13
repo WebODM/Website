@@ -930,3 +930,49 @@ a.credits-name:hover {
 .faq-answer a:hover {
     text-decoration: underline;
 }
+
+/* Code blocks in markdown pages */
+pre {
+    background: #f8fafc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+pre code {
+    color: #1e293b;
+    background: none;
+    padding: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+:not(pre) > code {
+    background: #f1f5f9;
+    border-radius: 4px;
+    padding: 0.15rem 0.35rem;
+    color: #0f172a;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* Blockquotes in markdown pages */
+blockquote {
+    background: #eff6ff;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    color: #1e3a5f;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Images in markdown pages */
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+}
