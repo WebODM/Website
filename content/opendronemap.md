@@ -1,6 +1,6 @@
 +++
 title = "OpenDroneMap"
-description = "OpenDroneMap and WebODM have split. Where to find the latest WebODM installers, latest docs and news about the OpenDroneMap - WebODM relationship."
+description = "OpenDroneMap and WebODM have split. Where to find the latest WebODM software installers, latest docs and news about OpenDroneMap - WebODM relationship."
 +++
 
 # OpenDroneMap
