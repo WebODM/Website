@@ -442,5 +442,17 @@
     "rtk": false,
     "recommended": false,
     "notes": "Flown over water"
+  },
+  {
+    "name": "Bürgewald",
+    "url": "https://github.com/idt-fhac/odm_data_buergewald",
+    "images": 735,
+    "size_mb": 17800,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": true,
+    "notes": "Micasense RedEdge-P Multispectral"
   }
 ]
