@@ -175,8 +175,8 @@
           <td class="dataset-name{% if d.recommended %} recommended{% endif %}">
             <a href="{{ d.url }}">{{ d.name }}</a>
           </td>
-          <td class="num">{{ d.images }}</td>
-          <td class="num">{{ d.size_mb }}</td>
+          <td class="num">{{ d.images | num_format }}</td>
+          <td class="num">{{ d.size_mb | num_format }}</td>
           <td class="text-center">
             {% if d.dronedb %}
               <a class="dronedb-link" href="{{ d.dronedb }}" title="Browse on DroneDB"><i class="bi bi-eye"></i></a>

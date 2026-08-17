@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros/fund.html" as fund %}
 
 {% block title %}Development Fund - WebODM{% endblock title %}
 
@@ -161,7 +160,7 @@
         <h2 class="section-title">Current Members</h2>
 
         <div class="mt-5">
-            {{ fund::credits(sponsors=sponsors, cta_url="#tiers") }}
+            {{ <credits sponsors={sponsors} cta_url="#tiers" /> }}
         </div>
     </div>
 </section>

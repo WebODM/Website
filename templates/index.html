@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros/fund.html" as fund %}
 
 {% block title %}WebODM - Drone Mapping Software{% endblock title %}
 
@@ -355,7 +354,7 @@
 
         <div class="mt-5">
           {% set sponsors = load_data(path="data/sponsors.json") %}
-          {{ fund::credits(sponsors=sponsors, cta_url="/fund") }}
+          {{ <credits sponsors={sponsors} cta_url="/fund" /> }}
         </div>
 
       </div>
