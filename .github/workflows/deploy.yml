@@ -27,7 +27,7 @@ jobs:
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.18.0
+          tool: zola@0.23.2
 
       - name: Set up Python
         uses: actions/setup-python@v5
