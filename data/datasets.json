@@ -1,6 +1,6 @@
 [
   {
-    "name": "aukerman",
+    "name": "Aukerman",
     "url": "https://github.com/OpenDroneMap/odm_data_aukerman/tree/master",
     "images": 77,
     "size_mb": 543,
@@ -12,7 +12,7 @@
     "notes": ""
   },
   {
-    "name": "bellus",
+    "name": "Bellus",
     "url": "https://github.com/OpenDroneMap/odm_data_bellus/tree/master",
     "images": 122,
     "size_mb": 717,
@@ -24,7 +24,7 @@
     "notes": ""
   },
   {
-    "name": "banana",
+    "name": "Banana",
     "url": "https://github.com/pierotofy/dataset_banana/tree/master",
     "images": 16,
     "size_mb": 14,
@@ -36,7 +36,7 @@
     "notes": "Actual bananas. Good starter dataset for 3D model, but does not appear on map."
   },
   {
-    "name": "boruszyn",
+    "name": "Boruszyn",
     "url": "https://github.com/merkato/odm_boruszyn_kap/tree/master",
     "images": 46,
     "size_mb": 181,
@@ -48,7 +48,7 @@
     "notes": ""
   },
   {
-    "name": "brighton_beach",
+    "name": "Brighton Beach",
     "url": "https://github.com/pierotofy/drone_dataset_brighton_beach/tree/master",
     "images": 18,
     "size_mb": 62,
@@ -60,7 +60,7 @@
     "notes": ""
   },
   {
-    "name": "caliterra",
+    "name": "Caliterra",
     "url": "https://github.com/OpenDroneMap/odm_data_caliterra/tree/master",
     "images": 77,
     "size_mb": 272,
@@ -72,7 +72,7 @@
     "notes": ""
   },
   {
-    "name": "copr",
+    "name": "COPR",
     "url": "https://github.com/OpenDroneMap/odm_data_copr/tree/master",
     "images": 41,
     "size_mb": 150,
@@ -84,7 +84,7 @@
     "notes": ""
   },
   {
-    "name": "garfield",
+    "name": "Garfield",
     "url": "https://github.com/OpenDroneMap/odm_data_garfield_msp/tree/master",
     "images": 140,
     "size_mb": 530,
@@ -96,7 +96,7 @@
     "notes": ""
   },
   {
-    "name": "gast_agrowing",
+    "name": "Gast Agrowing",
     "url": "https://drive.google.com/open?id=11yFommuRZyVXADcYEIjf-qz3AZrA8M6E",
     "images": 306,
     "size_mb": 431,
@@ -108,7 +108,7 @@
     "notes": "Multispectral. Notes in <a href='https://community.opendronemap.org/t/agrowing-450-550-650-850-dataset/3910'>forum post</a>"
   },
   {
-    "name": "helenenschacht",
+    "name": "Helenenschacht",
     "url": "https://github.com/OpenDroneMap/odm_data_helenenschacht/tree/main",
     "images": 176,
     "size_mb": 2553,
@@ -120,7 +120,7 @@
     "notes": "Autel Evo II Pro RTK &ndash; Forest Roadway"
   },
   {
-    "name": "langley",
+    "name": "Langley",
     "url": "https://github.com/OpenDroneMap/odm_data_langley/tree/master",
     "images": 200,
     "size_mb": 706,
@@ -132,7 +132,7 @@
     "notes": ""
   },
   {
-    "name": "lewis",
+    "name": "Lewis",
     "url": "https://github.com/OpenDroneMap/odm_data_lewis/tree/master",
     "images": 145,
     "size_mb": 610,
@@ -144,7 +144,7 @@
     "notes": ""
   },
   {
-    "name": "mf_obriens",
+    "name": "MF Obriens",
     "url": "https://github.com/Carlocktography/sUAS_Photogrammetry_Suite_Test_Data/tree/trunk/datasets/OBriens_2017-07-22",
     "images": 87,
     "size_mb": 243,
@@ -156,7 +156,7 @@
     "notes": "Full-Spectrum Blue/NIR NDVI. <a href='https://github.com/Carlocktography/sUAS_Photogrammetry_Suite_Test_Data#obriens_2017-07-22'>Further Details</a>"
   },
   {
-    "name": "mf_old_orchard",
+    "name": "MF Old Orchard",
     "url": "https://github.com/Carlocktography/sUAS_Photogrammetry_Suite_Test_Data/tree/trunk/datasets/OldOrchard_2017-07-22",
     "images": 171,
     "size_mb": 402,
@@ -168,7 +168,7 @@
     "notes": "Full-Spectrum Blue/NIR NDVI. <a href='https://github.com/Carlocktography/sUAS_Photogrammetry_Suite_Test_Data#oldorchard_2017-07-22'>Further Details</a>"
   },
   {
-    "name": "mygla",
+    "name": "Mygla",
     "url": "https://github.com/merkato/odm_mygla_dataset/tree/master",
     "images": 29,
     "size_mb": 150,
@@ -180,7 +180,7 @@
     "notes": "Good starter set."
   },
   {
-    "name": "piachoo_nir_1",
+    "name": "Piachoo NIR 1",
     "url": "https://drive.google.com/open?id=1uQfolV3X0R2WEK6axYyd3tWU0GGNrH57",
     "images": 196,
     "size_mb": 483,
@@ -192,7 +192,7 @@
     "notes": "Micasense NIR"
   },
   {
-    "name": "piachoo_nir_2",
+    "name": "Piachoo NIR 2",
     "url": "https://drive.google.com/open?id=1SJd_eVzmAJomihsjrjo1QMEqKfVNi2kt",
     "images": 210,
     "size_mb": 518,
@@ -204,7 +204,7 @@
     "notes": "Micasense NIR"
   },
   {
-    "name": "phalaborwa_lg_ol",
+    "name": "Phalaborwa Large OL",
     "url": "https://drive.google.com/drive/folders/19iog1dEHwZN23Q9LJtQDR_FrMDZK_Tk5?usp=sharing",
     "images": 126,
     "size_mb": 623,
@@ -216,7 +216,7 @@
     "notes": "For overlap/sidelap testing."
   },
   {
-    "name": "phalaborwa_sm_ol",
+    "name": "Phalaborwa Small OL",
     "url": "https://drive.google.com/drive/folders/1e1eA8LNpP4scYyDYdWd6UQ1qJ006iOXG?usp=sharing",
     "images": 36,
     "size_mb": 178,
@@ -228,7 +228,7 @@
     "notes": "For overlap/sidelap testing."
   },
   {
-    "name": "rising_valley_nir",
+    "name": "Rising Valley NIR",
     "url": "https://github.com/OpenDroneMap/odm_data_rv_nir/tree/master",
     "images": 566,
     "size_mb": 2810,
@@ -240,7 +240,7 @@
     "notes": ""
   },
   {
-    "name": "seneca",
+    "name": "Seneca",
     "url": "https://github.com/OpenDroneMap/odm_data_seneca/tree/master",
     "images": 167,
     "size_mb": 358,
@@ -252,7 +252,7 @@
     "notes": ""
   },
   {
-    "name": "sance",
+    "name": "Sance",
     "url": "https://github.com/merkato/odm_sance/tree/master",
     "images": 156,
     "size_mb": 850,
@@ -264,7 +264,7 @@
     "notes": ""
   },
   {
-    "name": "sand_key",
+    "name": "Sand Key",
     "url": "https://github.com/pierotofy/drone_dataset_sand_key/tree/master",
     "images": 100,
     "size_mb": 536,
@@ -276,7 +276,7 @@
     "notes": ""
   },
   {
-    "name": "sheffield_cross",
+    "name": "Sheffield Cross",
     "url": "https://github.com/pierotofy/drone_dataset_sheffield_cross/tree/master",
     "images": 172,
     "size_mb": 889,
@@ -288,7 +288,7 @@
     "notes": ""
   },
   {
-    "name": "sheffield_park_1",
+    "name": "Sheffield Park 1",
     "url": "https://github.com/pierotofy/drone_dataset_sheffield_park_1/tree/master",
     "images": 78,
     "size_mb": 390,
@@ -300,7 +300,7 @@
     "notes": ""
   },
   {
-    "name": "sheffield_park_2",
+    "name": "Sheffield Park 2",
     "url": "https://github.com/pierotofy/drone_dataset_sheffield_park_2/tree/master",
     "images": 54,
     "size_mb": 283,
@@ -312,7 +312,7 @@
     "notes": ""
   },
   {
-    "name": "sheffield_park_3",
+    "name": "Sheffield Park 3",
     "url": "https://github.com/pierotofy/drone_dataset_sheffield_park_3/tree/master",
     "images": 32,
     "size_mb": 165,
@@ -324,7 +324,7 @@
     "notes": ""
   },
   {
-    "name": "shitan_tw",
+    "name": "Shitan TW",
     "url": "https://drive.google.com/open?id=1Spu1F713Tw-z1XMdnrlD6NT4EhhFy2Lj",
     "images": 493,
     "size_mb": 2541,
@@ -336,7 +336,7 @@
     "notes": ""
   },
   {
-    "name": "toledo",
+    "name": "Toledo",
     "url": "https://github.com/OpenDroneMap/odm_data_toledo/tree/master",
     "images": 87,
     "size_mb": 449,
@@ -348,7 +348,7 @@
     "notes": ""
   },
   {
-    "name": "tuniu_tw_1",
+    "name": "Tuniu TW 1",
     "url": "https://drive.google.com/open?id=1faBtGK7Jm5lTo_UWLz6onDGYGqlykHPa",
     "images": 271,
     "size_mb": 2100,
@@ -360,7 +360,7 @@
     "notes": "RTK photos from Tuniu River, Taiwan. See <a href='https://community.opendronemap.org/t/2019-04-11-tuniu-river-toufeng-miaoli-county-taiwan/3292'>forum post</a> for additional info."
   },
   {
-    "name": "tuniu_tw_2",
+    "name": "Tuniu TW 2",
     "url": "https://drive.google.com/open?id=12UrLDHA6iZFJYF7OkErccH_xanRHefoZ",
     "images": 297,
     "size_mb": 2380,
@@ -372,7 +372,7 @@
     "notes": "RTK photos from Tuniu River, Taiwan. See <a href='https://community.opendronemap.org/t/2019-04-11-tuniu-river-toufeng-miaoli-county-taiwan/3292'>forum post</a> for additional info."
   },
   {
-    "name": "waterbury",
+    "name": "Waterbury",
     "url": "https://github.com/OpenDroneMap/odm_data_waterbury/tree/master",
     "images": 248,
     "size_mb": 1921,
@@ -384,7 +384,7 @@
     "notes": ""
   },
   {
-    "name": "wietrznia",
+    "name": "Wietrznia",
     "url": "https://github.com/merkato/odm_wietrznia/tree/master",
     "images": 225,
     "size_mb": 1200,
@@ -396,7 +396,7 @@
     "notes": ""
   },
   {
-    "name": "ziegeleipark",
+    "name": "Ziegeleipark",
     "url": "https://github.com/zivillian/odm_ziegeleipark/tree/master",
     "images": 7169,
     "size_mb": 28434,
@@ -408,7 +408,7 @@
     "notes": ""
   },
   {
-    "name": "zoo",
+    "name": "Zoo",
     "url": "https://github.com/OpenDroneMap/odm_data_zoo/tree/master",
     "images": 524,
     "size_mb": 3512,
