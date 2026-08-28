@@ -586,6 +586,43 @@ body {
     text-align: center;
 }
 
+.fund-announcement {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.1rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid rgba(0, 150, 224, 0.25);
+    border-radius: 999px;
+    background: rgba(0, 150, 224, 0.07);
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.fund-announcement-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: var(--gradient-blue);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.fund-announcement-date {
+    margin-left: 0.5rem;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
 .fund-hero h1 {
     font-size: 3rem;
     font-weight: 800;
