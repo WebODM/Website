@@ -3,7 +3,12 @@
 
   "gold": [],
   "silver": [],
-  "bronze": [],
+  "bronze": [{
+    "name": "Aeret",
+    "logo": "/images/logos/aeret.svg",
+    "url": "https://aeret.nl",
+    "discord": "aeret_87701"
+  }],
   "supporter": [{
     "name": "Zenith Drone Solutions",
     "url": "https://zenithdronesolutions.com/open-source-software/",

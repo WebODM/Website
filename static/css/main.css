@@ -699,7 +699,7 @@ body {
    "add your logo here" call to action, so an empty slot lines up with a full one. */
 .credits-logos .size-gold      { height: 121px; width: 286px; }
 .credits-logos .size-silver    { height: 99px;  width: 231px; }
-.credits-logos .size-bronze    { height: 81px;  width: 193px; }
+.credits-logos .size-bronze    { height: 86px;  width: 193px; }
 .credits-logos .size-cta       { height: 90px;  width: 240px; }
 
 /* The "Add your logo here?" call to action, styled as an empty slot */
@@ -853,8 +853,7 @@ a.credits-name:hover {
 
     .credits-logo.size-gold    { height: 90px;  width: 200px; }
     .credits-logo.size-silver  { height: 78px;  width: 175px; }
-    .credits-logo.size-bronze,
-    .credits-logo.size-diamond { height: 66px;  width: 150px; }
+    .credits-logo.size-bronze  { height: 66px;  width: 150px; }
 }
 
 /* ===========================================================================
