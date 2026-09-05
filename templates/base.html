@@ -9,7 +9,7 @@
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="{% if page is defined and page.title %}{{ page.title }}{% elif section is defined and section.title %}{{ section.title }}{% else %}{{ config.title }}{% endif %}">
-    <meta property="og:description" content="{% if page is defined and page.description %}{{page.description}}{% else %}WebODM - Free and Open Source Drone Mapping Software. Generate maps, point clouds, DEMs and 3D models from aerial images.{% endif %}">
+    <meta property="og:description" content="{% if page is defined and page.description %}{{page.description}}{% else %}WebODM - Free and Open Source Drone Mapping Software. Generate maps, point clouds, DEMs, 3D models and gaussian splats from aerial images.{% endif %}">
     <meta property="og:image" content="{{ get_url(path="images/social.webp") }}">
     {% if current_url %}
     <meta property="og:url" content="{{ current_url | safe }}">
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <h5 class="mb-3">WebODM</h5>
-                    <p>Free and Open Source Drone Mapping Software. Generate maps, point clouds, DEMs and 3D models from aerial images.</p>
+                    <p>Free and Open Source Drone Mapping Software. Generate maps, point clouds, DEMs, 3D models and gaussian splats from aerial images.</p>
                     <div class="mt-3">
                         <a href="https://github.com/WebODM" class="social-link" aria-label="GitHub">
                             <i class="bi bi-github"></i>
