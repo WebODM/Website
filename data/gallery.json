@@ -66,5 +66,10 @@
     "url": "https://community.opendronemap.org/uploads/default/original/3X/3/9/393b22557ded406ec93def5ba920b7db8dc29ea0.jpeg",
     "author": "Stephen Jones",
     "title": "Facades"
+  },
+  {
+    "url": "https://github.com/jet86/odm_dataset_mccabe-howitzer/raw/main/Howitzer_Splat.png",
+    "author": "jet86",
+    "title": "McCabe Park Howitzer - Gaussian Splats"
   }
 ]
