@@ -1,6 +1,6 @@
 # WebODM Website
 
-The official website for [WebODM](https://webodm.org), built with [Zola](https://www.getzola.org/) — a fast static site generator written in Rust.
+The official website for [WebODM](https://webodm.org), built with [Zola](https://www.getzola.org/), a fast static site generator written in Rust.
 
 ## Prerequisites
 
