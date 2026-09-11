@@ -12,18 +12,6 @@
     "notes": ""
   },
   {
-    "name": "Bellus",
-    "url": "https://github.com/OpenDroneMap/odm_data_bellus/tree/master",
-    "images": 122,
-    "size_mb": 717,
-    "dronedb": "https://hub.dronedb.app/r/odm/bellus",
-    "gps": true,
-    "gcp": true,
-    "rtk": false,
-    "recommended": false,
-    "notes": ""
-  },
-  {
     "name": "Banana",
     "url": "https://github.com/pierotofy/dataset_banana/tree/master",
     "images": 16,
@@ -34,6 +22,18 @@
     "rtk": false,
     "recommended": true,
     "notes": "Actual bananas. Good starter dataset for 3D model, but does not appear on map."
+  },
+  {
+    "name": "Bellus",
+    "url": "https://github.com/OpenDroneMap/odm_data_bellus/tree/master",
+    "images": 122,
+    "size_mb": 717,
+    "dronedb": "https://hub.dronedb.app/r/odm/bellus",
+    "gps": true,
+    "gcp": true,
+    "rtk": false,
+    "recommended": false,
+    "notes": ""
   },
   {
     "name": "Boruszyn",
@@ -60,6 +60,18 @@
     "notes": ""
   },
   {
+    "name": "Bürgewald",
+    "url": "https://github.com/idt-fhac/odm_data_buergewald",
+    "images": 735,
+    "size_mb": 17800,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": true,
+    "notes": "Micasense RedEdge-P Multispectral"
+  },
+  {
     "name": "Caliterra",
     "url": "https://github.com/OpenDroneMap/odm_data_caliterra/tree/master",
     "images": 77,
@@ -70,6 +82,18 @@
     "rtk": false,
     "recommended": true,
     "notes": ""
+  },
+  {
+    "name": "Conch",
+    "url": "https://github.com/manand881/Conch/tree/master",
+    "images": 88,
+    "size_mb": 211,
+    "dronedb": "https://hub.dronedb.app/r/odm/conch",
+    "gps": false,
+    "gcp": false,
+    "rtk": false,
+    "recommended": true,
+    "notes": "Sea Snail Conch. Like the Banana dataset but larger in size."
   },
   {
     "name": "COPR",
@@ -120,6 +144,18 @@
     "notes": "Autel Evo II Pro RTK &ndash; Forest Roadway"
   },
   {
+    "name": "Knypersley Main Pool 1",
+    "url": "https://www.dropbox.com/scl/fi/y9viqa6p1l1u8n3et80jk/26-04-13-Knypersley-Main-Pool-1.zip?rlkey=8in2k70kibnpr9bdcn54lybb2&dl=0",
+    "images": 100,
+    "size_mb": 408,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": false,
+    "notes": "Flown over water"
+  },
+  {
     "name": "Langley",
     "url": "https://github.com/OpenDroneMap/odm_data_langley/tree/master",
     "images": 200,
@@ -142,6 +178,18 @@
     "rtk": false,
     "recommended": false,
     "notes": ""
+  },
+  {
+    "name": "McCabe Park Howitzer",
+    "url": "https://github.com/jet86/odm_dataset_mccabe-howitzer",
+    "images": 129,
+    "size_mb": 1184,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": false,
+    "notes": "No nadir photos. Useful for 3D models and Gaussian Splatting"
   },
   {
     "name": "MF Obriens",
@@ -180,30 +228,6 @@
     "notes": "Good starter set."
   },
   {
-    "name": "Piachoo NIR 1",
-    "url": "https://drive.google.com/open?id=1uQfolV3X0R2WEK6axYyd3tWU0GGNrH57",
-    "images": 196,
-    "size_mb": 483,
-    "dronedb": "",
-    "gps": true,
-    "gcp": false,
-    "rtk": false,
-    "recommended": false,
-    "notes": "Micasense NIR"
-  },
-  {
-    "name": "Piachoo NIR 2",
-    "url": "https://drive.google.com/open?id=1SJd_eVzmAJomihsjrjo1QMEqKfVNi2kt",
-    "images": 210,
-    "size_mb": 518,
-    "dronedb": "",
-    "gps": true,
-    "gcp": false,
-    "rtk": false,
-    "recommended": false,
-    "notes": "Micasense NIR"
-  },
-  {
     "name": "Phalaborwa Large OL",
     "url": "https://drive.google.com/drive/folders/19iog1dEHwZN23Q9LJtQDR_FrMDZK_Tk5?usp=sharing",
     "images": 126,
@@ -228,6 +252,30 @@
     "notes": "For overlap/sidelap testing."
   },
   {
+    "name": "Piachoo NIR 1",
+    "url": "https://drive.google.com/open?id=1uQfolV3X0R2WEK6axYyd3tWU0GGNrH57",
+    "images": 196,
+    "size_mb": 483,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": false,
+    "notes": "Micasense NIR"
+  },
+  {
+    "name": "Piachoo NIR 2",
+    "url": "https://drive.google.com/open?id=1SJd_eVzmAJomihsjrjo1QMEqKfVNi2kt",
+    "images": 210,
+    "size_mb": 518,
+    "dronedb": "",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": false,
+    "notes": "Micasense NIR"
+  },
+  {
     "name": "Rising Valley NIR",
     "url": "https://github.com/OpenDroneMap/odm_data_rv_nir/tree/master",
     "images": 566,
@@ -237,18 +285,6 @@
     "gcp": false,
     "rtk": false,
     "recommended": false,
-    "notes": ""
-  },
-  {
-    "name": "Seneca",
-    "url": "https://github.com/OpenDroneMap/odm_data_seneca/tree/master",
-    "images": 167,
-    "size_mb": 358,
-    "dronedb": "https://hub.dronedb.app/r/odm/seneca",
-    "gps": true,
-    "gcp": false,
-    "rtk": false,
-    "recommended": true,
     "notes": ""
   },
   {
@@ -273,6 +309,18 @@
     "gcp": false,
     "rtk": false,
     "recommended": false,
+    "notes": ""
+  },
+  {
+    "name": "Seneca",
+    "url": "https://github.com/OpenDroneMap/odm_data_seneca/tree/master",
+    "images": 167,
+    "size_mb": 358,
+    "dronedb": "https://hub.dronedb.app/r/odm/seneca",
+    "gps": true,
+    "gcp": false,
+    "rtk": false,
+    "recommended": true,
     "notes": ""
   },
   {
@@ -418,41 +466,5 @@
     "rtk": false,
     "recommended": true,
     "notes": ""
-  },
-  {
-    "name": "Conch",
-    "url": "https://github.com/manand881/Conch/tree/master",
-    "images": 88,
-    "size_mb": 211,
-    "dronedb": "https://hub.dronedb.app/r/odm/conch",
-    "gps": false,
-    "gcp": false,
-    "rtk": false,
-    "recommended": true,
-    "notes": "Sea Snail Conch. Like the Banana dataset but larger in size."
-  },
-  {
-    "name": "Knypersley Main Pool 1",
-    "url": "https://www.dropbox.com/scl/fi/y9viqa6p1l1u8n3et80jk/26-04-13-Knypersley-Main-Pool-1.zip?rlkey=8in2k70kibnpr9bdcn54lybb2&dl=0",
-    "images": 100,
-    "size_mb": 408,
-    "dronedb": "",
-    "gps": true,
-    "gcp": false,
-    "rtk": false,
-    "recommended": false,
-    "notes": "Flown over water"
-  },
-  {
-    "name": "Bürgewald",
-    "url": "https://github.com/idt-fhac/odm_data_buergewald",
-    "images": 735,
-    "size_mb": 17800,
-    "dronedb": "",
-    "gps": true,
-    "gcp": false,
-    "rtk": false,
-    "recommended": true,
-    "notes": "Micasense RedEdge-P Multispectral"
   }
 ]
