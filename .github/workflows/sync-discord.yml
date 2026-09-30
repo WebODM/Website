@@ -73,6 +73,7 @@ jobs:
             git commit -m "Sync Discord help threads"
             git pull --rebase --autostash origin master
             git push
+            sleep 30
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
