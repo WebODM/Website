@@ -492,7 +492,7 @@ def render_index_page(threads: list[dict]) -> str:
     """Build the section index, which carries the listing data."""
     lines = [
         "+++",
-        'title = "WebODM Help & Answers"',
+        'title = "Help & Answers"',
         'description = "Answers to WebODM questions from the community '
         'Discord."',
         'template = "help_index.html"',
