@@ -21,6 +21,6 @@ As of 2026, there's a lot of outdated information about OpenDroneMap and its rel
  * OpenDroneMap sells installers for forks of WebODM, called "WebUI" or "OpenDroneMap Desktop", which are **not** WebODM and should not be confused with WebODM. 
  * Some references about WebODM on the OpenDroneMap website are outdated or inaccurate and should be disregarded.
 
+<hr/>
 
-
-
+Read this page in [中文](/opendronemap/zh/) | [Español](/opendronemap/es/) | [العربية](/opendronemap/ar/) | [Français](/opendronemap/fr/) | [Português](/opendronemap/pt/) | [Русский](/opendronemap/ru/) | [Bahasa Indonesia](/opendronemap/id/) | [Deutsch](/opendronemap/de/) | [日本語](/opendronemap/ja/) | [Italiano](/opendronemap/it/)
