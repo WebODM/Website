@@ -1,5 +1,5 @@
 +++
-title = "OpenDroneMap"
+title = "OpenDroneMap - WebODM"
 description = "OpenDroneMap dan WebODM telah berpisah. Tempat menemukan installer WebODM terbaru, dokumentasi terbaru, dan berita tentang hubungan OpenDroneMap - WebODM."
 path = "opendronemap/id"
 
