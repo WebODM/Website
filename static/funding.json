@@ -24,50 +24,6 @@
       },
       "licenses": ["spdx:AGPL-3.0"],
       "tags": ["maps", "drones", "3d-modeling", "graphics", "data-visualization", "scientific-computing", "web-development"]
-    },
-    {
-      "guid": "odx",
-      "name": "ODX",
-      "description": "Command line toolkit to generate maps, point clouds, 3D models and DEMs from aerial and ground images. The processing engine behind WebODM.",
-      "webpageUrl": {
-        "url": "https://webodm.org/odx/"
-      },
-      "repositoryUrl": {
-        "url": "https://github.com/WebODM/ODX",
-        "wellKnown": "https://github.com/WebODM/ODX/blob/master/.well-known/funding-manifest-urls"
-      },
-      "licenses": ["spdx:AGPL-3.0"],
-      "tags": ["maps", "drones", "3d-modeling", "graphics", "scientific-computing"]
-    },
-    {
-      "guid": "nodeodx",
-      "name": "NodeODX",
-      "description": "REST API to access photogrammetry engines such as ODX. Lets WebODM and other applications distribute processing across machines.",
-      "webpageUrl": {
-        "url": "https://github.com/WebODM/NodeODX",
-        "wellKnown": "https://github.com/WebODM/NodeODX/blob/master/.well-known/funding-manifest-urls"
-      },
-      "repositoryUrl": {
-        "url": "https://github.com/WebODM/NodeODX",
-        "wellKnown": "https://github.com/WebODM/NodeODX/blob/master/.well-known/funding-manifest-urls"
-      },
-      "licenses": ["spdx:AGPL-3.0"],
-      "tags": ["api", "server", "maps", "drones", "cloud"]
-    },
-    {
-      "guid": "opensplat",
-      "name": "OpenSplat",
-      "description": "Production-grade 3D gaussian splatting with CPU/GPU support for Windows, Mac and Linux.",
-      "webpageUrl": {
-        "url": "https://github.com/WebODM/OpenSplat",
-        "wellKnown": "https://github.com/WebODM/OpenSplat/blob/main/.well-known/funding-manifest-urls"
-      },
-      "repositoryUrl": {
-        "url": "https://github.com/WebODM/OpenSplat",
-        "wellKnown": "https://github.com/WebODM/OpenSplat/blob/main/.well-known/funding-manifest-urls"
-      },
-      "licenses": ["spdx:AGPL-3.0"],
-      "tags": ["3d-modeling", "graphics", "machine-learning", "drones", "scientific-computing"]
     }
   ],
   "funding": {
