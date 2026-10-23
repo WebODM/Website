@@ -4,7 +4,7 @@
     "type": "organisation",
     "role": "steward",
     "name": "UAV4GEO",
-    "email": "pt@masseranolabs.com",
+    "email": "info@uav4geo.com",
     "description": "UAV4GEO stewards the WebODM ecosystem, a set of free and open source tools for processing aerial imagery into maps, point clouds, 3D models and elevation models. 100% of the funds go to engineering, research, infrastructure and development of WebODM, ODX, NodeODX, OpenSplat and the upstream projects they depend on.",
     "webpageUrl": {
       "url": "https://webodm.org/fund/"
