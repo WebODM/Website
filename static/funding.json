@@ -1,0 +1,125 @@
+{
+  "version": "v1.1.0",
+  "entity": {
+    "type": "organisation",
+    "role": "steward",
+    "name": "UAV4GEO",
+    "email": "pt@masseranolabs.com",
+    "description": "UAV4GEO stewards the WebODM ecosystem, a set of free and open source tools for processing aerial imagery into maps, point clouds, 3D models and elevation models. 100% of the funds go to engineering, research, infrastructure and development of WebODM, ODX, NodeODX, OpenSplat and the upstream projects they depend on.",
+    "webpageUrl": {
+      "url": "https://webodm.org/fund/"
+    }
+  },
+  "projects": [
+    {
+      "guid": "webodm",
+      "name": "WebODM",
+      "description": "User-friendly, commercial-grade software for processing aerial imagery. Generates georeferenced maps, point clouds, elevation models and textured 3D models from drone images, with a web interface, plugins and an API.",
+      "webpageUrl": {
+        "url": "https://webodm.org"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/WebODM/WebODM",
+        "wellKnown": "https://github.com/WebODM/WebODM/blob/master/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:AGPL-3.0"],
+      "tags": ["maps", "drones", "3d-modeling", "graphics", "data-visualization", "scientific-computing", "web-development"]
+    },
+    {
+      "guid": "odx",
+      "name": "ODX",
+      "description": "Command line toolkit to generate maps, point clouds, 3D models and DEMs from aerial and ground images. The processing engine behind WebODM.",
+      "webpageUrl": {
+        "url": "https://webodm.org/odx/"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/WebODM/ODX",
+        "wellKnown": "https://github.com/WebODM/ODX/blob/master/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:AGPL-3.0"],
+      "tags": ["maps", "drones", "3d-modeling", "graphics", "scientific-computing"]
+    },
+    {
+      "guid": "nodeodx",
+      "name": "NodeODX",
+      "description": "REST API to access photogrammetry engines such as ODX. Lets WebODM and other applications distribute processing across machines.",
+      "webpageUrl": {
+        "url": "https://github.com/WebODM/NodeODX",
+        "wellKnown": "https://github.com/WebODM/NodeODX/blob/master/.well-known/funding-manifest-urls"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/WebODM/NodeODX",
+        "wellKnown": "https://github.com/WebODM/NodeODX/blob/master/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:AGPL-3.0"],
+      "tags": ["api", "server", "maps", "drones", "cloud"]
+    },
+    {
+      "guid": "opensplat",
+      "name": "OpenSplat",
+      "description": "Production-grade 3D gaussian splatting with CPU/GPU support for Windows, Mac and Linux.",
+      "webpageUrl": {
+        "url": "https://github.com/WebODM/OpenSplat",
+        "wellKnown": "https://github.com/WebODM/OpenSplat/blob/main/.well-known/funding-manifest-urls"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/WebODM/OpenSplat",
+        "wellKnown": "https://github.com/WebODM/OpenSplat/blob/main/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:AGPL-3.0"],
+      "tags": ["3d-modeling", "graphics", "machine-learning", "drones", "scientific-computing"]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "invoice",
+        "type": "other",
+        "address": "https://forms.gle/zcpG3oDRvEvaSQzy7",
+        "description": "Fill the form with the tier you have in mind. We send an invoice and handle the paperwork. Memberships run for a year from the date the invoice is paid."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "supporter",
+        "status": "active",
+        "name": "Supporter",
+        "description": "$300 to $1,000 / year. Name + link on the home page and commercial providers page.",
+        "amount": 300,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": ["invoice"]
+      },
+      {
+        "guid": "bronze",
+        "status": "active",
+        "name": "Bronze",
+        "description": "$1,000 to $5,000 / year. Logo + link on the home page and commercial providers page, private Discord channel with core maintainers.",
+        "amount": 1000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": ["invoice"]
+      },
+      {
+        "guid": "silver",
+        "status": "active",
+        "name": "Silver",
+        "description": "$5,000 to $25,000 / year. Bronze benefits plus an Advisory Council seat.",
+        "amount": 5000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": ["invoice"]
+      },
+      {
+        "guid": "gold",
+        "status": "active",
+        "name": "Gold",
+        "description": "$25,000+ / year. Silver benefits plus guaranteed response times for critical issues.",
+        "amount": 25000,
+        "currency": "USD",
+        "frequency": "yearly",
+        "channels": ["invoice"]
+      }
+    ]
+  }
+}
