@@ -1,11 +1,11 @@
 +++
 title = "ODX - Open Source Toolkit For Processing Aerial Imagery"
-description = "ODX is a free and open source photogrammetry engine for processing aerial and ground imagery. It turns images into point clouds, 3D models, orthophotos and elevation models."
+description = "ODX is your free and open source photogrammetry engine for processing aerial and ground imagery. It turns images into point clouds, 3D models, orthophotos and elevation models."
 +++
 
 # ODX
 
-A free and open source photogrammetry engine for processing aerial and ground imagery. ODX turns images into:
+Your free and open source photogrammetry engine for processing aerial and ground imagery. ODX turns images into:
 
 * Classified Point Clouds
 * 3D Textured Models
