@@ -3,7 +3,7 @@ base_url = "https://webodm.org"
 
 # Used as the last-resort <title> and meta description fallback in base.html
 title = "WebODM - Drone Mapping Software"
-description = "Free and Open Source Drone Mapping Software"
+description = "Your free and open source drone mapping software"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
@@ -18,7 +18,7 @@ build_search_index = false
 [extra]
 # Put all your custom variables here
 site_title = "WebODM - Drone Mapping Software"
-site_description = "Free and Open Source Drone Mapping Software"
+site_description = "Your free and open source drone mapping software"
 primary_color = "#6893d8"
 
 [extra.fund]
